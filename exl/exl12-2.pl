@@ -3,7 +3,7 @@ unless (@AGRV) {
     print "no file.\n";
 }
 my $oldname = shift @ARGV;
-my $old = -M $old;
+my $old = -M $oldname;
 foreach $file (@ARGV) {
     $time = -M $file;
     if ($time > $old) {
